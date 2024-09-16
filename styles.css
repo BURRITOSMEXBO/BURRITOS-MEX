@@ -1,0 +1,212 @@
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+.header {
+    background: #f8f8f8; /* Crema */
+    color: #333;
+    padding: 1em;
+    border-bottom: 4px solid #f88379; /* Rojo Coral Pastel */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1em;
+    flex-wrap: wrap;
+}
+
+.logo {
+    max-width: 150px; /* Tamaño del logo aumentado */
+    margin-right: 1em;
+}
+
+.header-text {
+    text-align: center;
+}
+
+.header-text h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: #4a9a3e; /* Verde pastel */
+}
+
+.header-text p {
+    font-size: 1.1em;
+    margin: 0.5em 0;
+    color: #a2a2a2;
+}
+
+.menu-toggle {
+    background-color: #4a9a3e; /* Verde pastel */
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    display: none; /* Oculto en pantallas grandes */
+    font-size: 1.2em;
+    border-radius: 5px;
+    margin-top: 1em;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    background-color: #f88379; /* Rojo Coral Pastel */
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #f7746a; /* Rojo Coral más oscuro */
+}
+
+.container {
+    padding: 2em;
+}
+
+.menu, .combos, .bebidas, .about, .contact, .location {
+    margin-bottom: 2em;
+}
+
+.menu-item, .combo-item, .drink-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5em;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.menu-item img, .combo-item img, .drink-item img {
+    max-width: 200px; /* Tamaño aumentado de las imágenes del menú */
+    border-radius: 8px 0 0 8px;
+}
+
+.item-info {
+    padding: 1em;
+    flex: 1;
+}
+
+.item-title {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 0.5em;
+    color: #4a9a3e; /* Verde pastel */
+}
+
+.details-btn {
+    background-color: #f88379; /* Rojo Coral Pastel */
+    color: #fff;
+    border: none;
+    padding: 0.6em 1.2em; /* Aumentar el relleno del botón */
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.2em; /* Aumentar el tamaño del texto */
+    transition: background-color 0.3s;
+}
+
+.details-btn:hover {
+    background-color: #f7746a; /* Rojo Coral más oscuro */
+}
+
+.footer {
+    background: #4a9a3e; /* Verde pastel */
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+}
+
+.modal {
+    display: none; /* Ocultar por defecto */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 2em;
+    border-radius: 8px;
+    position: relative;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #4a9a3e; /* Verde pastel */
+    margin: 0.5em 0;
+}
+
+.social-icon {
+    width: 40px; /* Tamaño aumentado para los íconos */
+    height: auto; /* Mantener la proporción original */
+    margin-right: 0.5em;
+}
+
+.map-link {
+    color: #4a9a3e; /* Verde pastel */
+    text-decoration: none;
+    background: #f4f4f4;
+    border: 1px solid #ccc;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.map-link:hover {
+    background: #ddd;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: none; /* Ocultar el menú por defecto en dispositivos móviles */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #f8f8f8; /* Crema */
+    }
+
+    .menu-toggle {
+        display: block; /* Mostrar el botón en dispositivos móviles */
+    }
+
+    .navbar.show {
+        display: flex; /* Mostrar el menú cuando el botón se presione */
+    }
+}
